@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+</body>
+<script>
+var s1 = "";
+for( var i = 0; i <= 31; ++i )
+{
+  s1 += "&ltoption value=\""
+        + ( "00" + i ).slice(-2)
+        + "\"&gt"
+        + ( "00" + i ).slice(-2)
+        + "&lt/option&gt <br/>";
+}
+document.body.innerHTML += s1 + "<br/><br/>";
+
+s1 = '';
+for( var i = 0; i < 24; ++i )
+{
+  s1 += "&ltoption value=\""
+        + ( "00" + i ).slice(-2)
+        + "\"&gt"
+        + ( "00" + i ).slice(-2);
+  if( i > 12 )
+  {
+    s1 += " (" + (i - 12) + " PM)"
+  }
+  if( i == 0 )
+  {
+    s1 += " (12 AM)"
+  }
+  if( i == 12 )
+  {
+    s1 += " (12 PM)"
+  }
+  s1 += "&lt/option&gt <br/>";
+}
+document.body.innerHTML += s1 + "<br/><br/>";
+s1 = "";
+for( var i = 0; i < 60; ++i )
+{
+  s1 += "&ltoption value=\""
+        + ( "00" + i ).slice(-2)
+        + "\"&gt"
+        + ( "00" + i ).slice(-2)
+        + "&lt/option&gt <br/>";
+}
+
+
+document.body.innerHTML += s1 + "<br/><br/>";
+</script>
+</html>
